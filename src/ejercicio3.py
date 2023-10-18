@@ -10,7 +10,7 @@ def numerosImpares(numero):
             
             if i%2 != 0:
                 print(i, end=",")
-        print("\n")
+        print()
         
 if __name__ == "__main__":       
     numero = int(input("Introduce un numero: "))
