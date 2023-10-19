@@ -7,5 +7,7 @@ def repetir():
     while entrada != "salir":
         print(entrada)
         entrada = input(f"Introduzca lo que sea, si introduces \"salir\" terminara: ")
-        
-repetir()
+     
+if __name__ == "__main__":
+
+    repetir()
