@@ -1,6 +1,6 @@
-#Ejercicio 14¶
-#Leer números enteros de teclado, hasta que el usuario ingrese el 0. Finalmente,
-#mostrar la sumatoria de todos los números ingresados.
+#Ejercicio 15¶
+#Leer números enteros de teclado, hasta que el usuario ingrese el 0. Finalmente, mostrar la sumatoria
+#de todos los números positivos ingresados.
 
 def leeNumero():
     negativo = False
@@ -19,14 +19,18 @@ def leeNumero():
         numero = "-"+numero
     return int(numero)
 
-def sumarBucle():
+def sumarBuclePositivos():
+    numeros = []
     suma = 0
     numero = leeNumero()
     while numero != 0:
-        suma += numero
+        numeros.append(numero)
         numero = leeNumero()
+    for num in numeros:
+        if num > 0:
+            suma += num 
     return suma
 
 if __name__ == "__main__":
-    print(sumarBucle())
+    print(sumarBuclePositivos())
     
