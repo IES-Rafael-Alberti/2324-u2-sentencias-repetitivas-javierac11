@@ -8,7 +8,7 @@ def leeNumero():
         numero = input("ERROR.Introduce un numero: ")
     return int(numero)
 
-def numerosImpares(numero: int):
+def numerosImpares(numero):
     impares = ""
     if numero < 0:
         print("Error")
