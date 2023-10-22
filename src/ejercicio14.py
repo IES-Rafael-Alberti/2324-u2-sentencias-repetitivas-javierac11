@@ -2,7 +2,7 @@
 #Leer números enteros de teclado, hasta que el usuario ingrese el 0. Finalmente,
 #mostrar la sumatoria de todos los números ingresados.
 
-def leeNumero():
+def leeNumero() -> int:
     negativo = False
     numero = input("Introduce un numero: ")
     if numero[0] == "-":
@@ -19,14 +19,21 @@ def leeNumero():
         numero = "-"+numero
     return int(numero)
 
-def sumarBucle():
-    suma = 0
+def leerNumeros() -> list:
+    numeros = []
     numero = leeNumero()
     while numero != 0:
-        suma += numero
+        numeros.append(numero)
         numero = leeNumero()
+    return numeros
+
+def sumarNumeros(numeros: list) -> int:
+    suma = 0
+    for numero in numeros:
+        suma += numero
     return suma
 
 if __name__ == "__main__":
-    print(sumarBucle())
+    numeros = leerNumeros()
+    print(sumarNumeros(numeros))
     

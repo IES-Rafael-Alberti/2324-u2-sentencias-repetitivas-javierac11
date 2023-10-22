@@ -8,14 +8,21 @@ def leeNumero():
         numero = input("ERROR.Introduce un numero: ")
     return int(numero)
 
-def numeroMayor():
-    mayor = 0
+def leerNumeros() -> list:
+    numeros = []
     numero = leeNumero()
     while numero != 0:
+        numeros.append(numero)
+        numero = leeNumero()
+    return numeros
+
+def numeroMayor(numeros):
+    mayor = 0
+    for numero in numeros:
         if numero > mayor:
             mayor = numero
-        numero = leeNumero()
     return mayor
 
 if __name__ == "__main__":
-    print(numeroMayor())
+    numeros = leerNumeros()
+    print(numeroMayor(numeros))

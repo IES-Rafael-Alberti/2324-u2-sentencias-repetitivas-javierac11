@@ -19,18 +19,23 @@ def leeNumero():
         numero = "-"+numero
     return int(numero)
 
-def sumarBuclePositivos():
+def leerNumeros() -> list:
     numeros = []
-    suma = 0
     numero = leeNumero()
     while numero != 0:
         numeros.append(numero)
         numero = leeNumero()
-    for num in numeros:
-        if num > 0:
-            suma += num 
+    return numeros
+
+def sumarNumeros(numeros: list) -> int:
+    suma = 0
+    for numero in numeros:
+        if numero > 0:
+            suma += numero
     return suma
 
+
 if __name__ == "__main__":
-    print(sumarBuclePositivos())
+    numeros = leerNumeros()
+    print(sumarNumeros(numeros))
     
